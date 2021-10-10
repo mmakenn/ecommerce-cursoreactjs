@@ -1,4 +1,24 @@
-ul{
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch:wght@700');
+
+.App-navbar {
+    background-color: #b1b1b1;
+    padding: 3px;
+    opacity: 0.9;
+    width: 100vw;
+}
+
+h2 {
+    font-family: 'Tourney', cursive;
+    font-size: 3.2rem;
+}
+
+h1 {
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 1.5rem;
+}
+
+ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
