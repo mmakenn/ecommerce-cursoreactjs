@@ -1,7 +1,7 @@
 import './itemListContainer.css';
 
 export const ItemListContainer = (props) => {
-    return <div>
+    return (<div>
             { props.greeting }
-            </div> 
+            </div> );
 }

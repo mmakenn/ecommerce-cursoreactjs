@@ -1,8 +1,8 @@
 import './navbar.css';
-import { CartWidget } from '../cartwidget/cartwidget';
+import { CartWidget } from '../cartWidget/cartWidget';
 
 export const Navbar = () => {
-    return <nav className="App-navbar">
+    return (<nav className="App-navbar">
                 <div className="App-navbar-brand">
                     <h2>MC Training</h2>
                     <h1>- Entrenamientos Personalizados -</h1>
@@ -12,5 +12,5 @@ export const Navbar = () => {
                     <li><a href="">Planes de entrenamiento</a></li>
                     <li><a href="">Carrito</a><CartWidget/></li>
                 </ul>
-             </nav>
+             </nav>);
 }
