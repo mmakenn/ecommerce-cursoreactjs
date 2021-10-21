@@ -1,7 +1,6 @@
 import './App.css';
 import { Navbar } from './components/navbar/navbar.js'
-import { ItemListContainer } from './components/itemListContainer/itemListContainer.js'
-import { ItemCount } from './components/itemCount/itemCount.js'
+import { ItemListContainer } from './containers/itemListContainer/itemListContainer.js'
 
 function App() {
   /* const alertName = () => alert('Hola') */ /* No hace falta llave porque es  una sola linea y esta inmediatamente despues */
@@ -14,10 +13,7 @@ function App() {
         { /* <button onClick={alertName}>Click Me</button> */}
       </header>
       <div className="App-content">
-        <ItemListContainer greeting='Bienvenidos' />
-
-        <ItemCount />
-
+        <ItemListContainer/>
       </div>
     </div>
   );
