@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './itemCount.css';
+import { Container, Button } from 'react-bootstrap';
 
 export const ItemCount = () => {
     const [count, setCount] = useState(0);
@@ -12,14 +13,14 @@ export const ItemCount = () => {
     }
 
     return (
-        <>
+        <Container className='d-flex justify-content-around item-count'>
             {/* Botón para sumar 1 al contador */}
-            <button onClick={addOne}> + </button>
+            <Button onClick={addOne} variant='warning' className='d-flex align-items-center'> + </Button>
 
             <p> {count} </p>
 
             {/* Botón para restar 1 al contador */}
-            <button onClick={restOne}> - </button>
-        </>
+            <Button onClick={restOne} variant='warning' className='d-flex align-items-center'> - </Button>
+        </Container>
     );
 }

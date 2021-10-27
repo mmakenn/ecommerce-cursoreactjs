@@ -12,5 +12,6 @@ export const Navbar = () => {
                     <li><a href="">Planes de entrenamiento</a></li>
                     <li><a href="">Carrito</a><CartWidget/></li>
                 </ul>
-             </nav>);
+             </nav>
+    );
 }
