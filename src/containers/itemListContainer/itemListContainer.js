@@ -12,22 +12,22 @@ export const ItemListContainer = () => {
 
     const [products, setProducts] = useState(null);
 
-    function fetchSimulator() {
-        return new Promise(resolve => {
-            setTimeout(() => {
-            resolve(productsDemo);
-            }, 2000);
-        });
-    }
-        
-    async function chargeProducts() {
-        console.log('calling');
-        const result = await fetchSimulator();
-        setProducts(result);
-        console.log('loaded');
-    }
-
     useEffect(() => {
+        function fetchSimulator() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                resolve(productsDemo);
+                }, 2000);
+            });
+        }
+            
+        async function chargeProducts() {
+            console.log('calling');
+            const result = await fetchSimulator();
+            setProducts(result);
+            console.log('loaded');
+        }
+        
         chargeProducts();   
     }, []);
 
