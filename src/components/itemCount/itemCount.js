@@ -14,13 +14,13 @@ export const ItemCount = () => {
 
     return (
         <Container className='d-flex justify-content-around item-count'>
-            {/* Botón para sumar 1 al contador */}
-            <Button onClick={addOne} variant='warning' className='d-flex align-items-center'> + </Button>
+            {/* Botón para restar 1 al contador */}
+            <Button onClick={restOne} variant='warning' className='d-flex align-items-center'> - </Button>
 
             <p> {count} </p>
 
-            {/* Botón para restar 1 al contador */}
-            <Button onClick={restOne} variant='warning' className='d-flex align-items-center'> - </Button>
+            {/* Botón para sumar 1 al contador */}
+            <Button onClick={addOne} variant='warning' className='d-flex align-items-center'> + </Button>
         </Container>
     );
 }
