@@ -1,38 +1,54 @@
 import './itemListContainer.css';
 import { ItemList } from '../../components/itemList/itemList';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router';
 
 
-export const ItemListContainer = () => {
-    /* Encargado de leer la base de datos, se los pasa a ItemList. setTimeOut = 2 seg */
-    const productsDemo = [
-        { id:'1', title: 'Plan Inicial', description: 'Rutinas de 1 hora full body, para realizar durante todo el mes', price: 2000, imgLink: '/images/planInicial.jpg' },
-        { id:'2', title: 'Plan Avanzado', description: 'Rutinas de 1 hora personalizada según el objetivo del alumno', price: 3500, imgLink: '/images/planAvanzado.jpg' }
-    ];
+export const ItemListContainer = (props) => {
+  /* Encargado de leer la base de datos, se los pasa a ItemList. setTimeOut = 2 seg */
+  const [products, setProducts] = useState(null);
+  const {categoryId} = useParams();
 
-    const [products, setProducts] = useState(null);
+  useEffect(() => {
+      /* function fetchSimulator() {
+          return new Promise(resolve => {
+              setTimeout(() => {
+              resolve(productsDemo);
+              }, 2000);
+          });
+      }
+          
+      async function chargeProducts() {
+          console.log('calling');
+          const result = await fetchSimulator();
+          setProducts(result);
+          console.log('loaded');
+      }
+      
+      chargeProducts();    */
 
-    useEffect(() => {
-        function fetchSimulator() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                resolve(productsDemo);
-                }, 2000);
-            });
+    const getData = () => {
+      fetch('../data.json', {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         }
-            
-        async function chargeProducts() {
-            console.log('calling');
-            const result = await fetchSimulator();
-            setProducts(result);
-            console.log('loaded');
-        }
-        
-        chargeProducts();   
-    }, []);
+      }).then((response) => {
+        return response.json();
+      }).then((myJson)  => {
+        let loadedProducts;
+          if (! categoryId) {
+            loadedProducts = myJson['planes'].concat(myJson['clases']);
+          } else {
+            loadedProducts = myJson[categoryId];
+          }
+          setProducts(loadedProducts);
+      });
+    }
 
-    return (<div>
-                <ItemList products={products} />
-            </div> 
-    );
+    getData();
+
+  }, [categoryId]);
+
+  return (products ? <ItemList products={products} /> : <p>Cargando productos...</p>);
 }

@@ -1,4 +1,5 @@
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { ItemCount } from "../itemCount/itemCount";
 
 export const ItemDetail = (props) => {
@@ -19,7 +20,7 @@ export const ItemDetail = (props) => {
                 </Card.Text>
                 <ItemCount/>
                 <Button variant='warning' className='m-3'>Lo quiero!</Button>
-                <Button variant='warning' className='m-3'>Volver</Button>
+                <Button variant='warning' className='m-3'><Link to='/'> Volver </Link></Button>
             </Card.Body>
             <Card.Footer className="text-muted">Una vez acreditado el pago, se enviara un mail con un formulario para que te contactemos dentro de las 48 hs.</Card.Footer>
         </Card>

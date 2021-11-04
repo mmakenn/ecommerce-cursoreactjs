@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router';
 import { ItemDetail } from "../../components/itemDetail/itemDetail";
 
 export const ItemDetailContainer = () => {
-    const productsDemo = [
-        { id:'1', title: 'Plan Inicial', description: 'Rutinas de 1 hora full body, para realizar durante todo el mes', largeDescription: 'Seguimiento diario del profesor. Videos ondemand con explicación de los ejercicios.', price: 2000, imgLink: '/images/planInicial.jpg' },
-        { id:'2', title: 'Plan Avanzado', description: 'Rutinas de 1 hora personalizada según el objetivo del alumno, para realizar durante todo el mes.', largeDescription: 'Seguimiento diario del profesor. Videos ondemand con explicación de los ejercicios.', price: 3500, imgLink: '/images/planAvanzado.jpg' }
-    ];
-
     const [product, setProduct] = useState(null);
+    const {itemId} = useParams();
 
     useEffect(() => {
-        function fetchSimulator(id) {
+        /* function fetchSimulator(id) {
             return new Promise(resolve => {
                 setTimeout(() => {
                     productsDemo.forEach(element => {
@@ -29,10 +26,27 @@ export const ItemDetailContainer = () => {
             console.log('loaded');
         }
         
-        getProduct('1');   
-    }, []);
+        getProduct('1'); */
 
-    return ( product ?
-        <ItemDetail product={product}/> : null
-    );
+        const getData = () => {
+            fetch('../data.json', {
+                headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+                }
+            }).then((response) => {
+                return response.json();
+            }).then((myJson)  => {
+                let loadedProducts = myJson['planes'].concat(myJson['clases']);
+                setProduct(
+                    loadedProducts.find(element => element.id === itemId)
+                ); 
+            });
+        }
+    
+        getData();
+
+    }, [itemId]);
+
+    return ( product ? <ItemDetail product={product}/> : null);
 }
