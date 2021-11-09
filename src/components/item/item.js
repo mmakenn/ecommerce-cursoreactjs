@@ -1,4 +1,3 @@
-import { ItemCount } from '../itemCount/itemCount.js'
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -14,8 +13,6 @@ export const Item = (props) => {
                 <Card.Text>
                 $ {props.price}
                 </Card.Text>
-                <ItemCount/>
-                <Button variant='warning' className='m-3'>Lo quiero!</Button>
                 <Button variant='warning' className='m-3'><Link to={`/item/${props.id}`}> Ver detalle </Link></Button>
             </Card.Body>
         </Card>
