@@ -1,34 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { ItemDetail } from "../../components/itemDetail/itemDetail";
+import { Loader } from '../../components/loader/loader'
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
     const {itemId} = useParams();
 
     useEffect(() => {
-        /* function fetchSimulator(id) {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    productsDemo.forEach(element => {
-                        if (element.id === id){
-                            resolve(element);
-                        } 
-                    });
-                }, 2000);
-            });
-        }
-            
-        async function getProduct(id) {
-            console.log('calling');
-            const result = await fetchSimulator(id);
-            setProduct(result);
-            console.log('loaded');
-        }
-        
-        getProduct('1'); */
-
         const getData = () => {
+            console.log('Hago fetch');
             fetch('../data.json', {
                 headers : { 
                 'Content-Type': 'application/json',
@@ -48,5 +29,5 @@ export const ItemDetailContainer = () => {
 
     }, [itemId]);
 
-    return ( product ? <ItemDetail product={product}/> : null);
+    return ( product ? <ItemDetail product={product}/> : <Loader/>);
 }

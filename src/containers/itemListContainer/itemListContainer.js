@@ -2,32 +2,15 @@ import './itemListContainer.css';
 import { ItemList } from '../../components/itemList/itemList';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import { Loader } from '../../components/loader/loader'
 
-
-export const ItemListContainer = (props) => {
-  /* Encargado de leer la base de datos, se los pasa a ItemList. setTimeOut = 2 seg */
+export const ItemListContainer = () => {
   const [products, setProducts] = useState(null);
   const {categoryId} = useParams();
 
   useEffect(() => {
-      /* function fetchSimulator() {
-          return new Promise(resolve => {
-              setTimeout(() => {
-              resolve(productsDemo);
-              }, 2000);
-          });
-      }
-          
-      async function chargeProducts() {
-          console.log('calling');
-          const result = await fetchSimulator();
-          setProducts(result);
-          console.log('loaded');
-      }
-      
-      chargeProducts();    */
-
     const getData = () => {
+      console.log('Hago fetch');
       fetch('../data.json', {
         headers : { 
           'Content-Type': 'application/json',
@@ -50,5 +33,5 @@ export const ItemListContainer = (props) => {
 
   }, [categoryId]);
 
-  return (products ? <ItemList products={products} /> : <p>Cargando productos...</p>);
+  return (products ? <ItemList products={products} /> : <Loader/>);
 }
