@@ -5,6 +5,7 @@ import { ItemListContainer } from './containers/itemListContainer/itemListContai
 import { ItemDetailContainer } from './containers/itemDetailContainer/itemDetailContainer';
 import { Cart } from './components/cart/cart';
 import { CartProvider } from './context/cartContext';
+import { CheckOut } from './components/checkOut/checkOut';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
                 <Cart/>
               </Route>
             </Switch>
+            <Route path='/checkout'>
+              <CheckOut />
+            </Route>
           </div>
         </div>
       </BrowserRouter>

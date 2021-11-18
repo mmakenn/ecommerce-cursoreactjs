@@ -29,6 +29,7 @@ export const CartProvider = ( {children} ) => {
 
     const clearCart = () => {
         setItems([]);
+        setItemsQuantity(0);
     }
 
     const getTotalPrice = () => {

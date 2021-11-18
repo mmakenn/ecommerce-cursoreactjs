@@ -2,14 +2,17 @@ import './itemListContainer.css';
 import { ItemList } from '../../components/itemList/itemList';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-import { Loader } from '../../components/loader/loader'
+import { Loader } from '../../components/loader/loader';
+
+import { db } from '../../firebase';
+import { collection, doc, getDocs } from '@firebase/firestore';
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState(null);
   const {categoryId} = useParams();
 
   useEffect(() => {
-    const getData = () => {
+    /* const getData = () => {
       console.log('Hago fetch');
       fetch('../data.json', {
         headers : { 
@@ -29,7 +32,17 @@ export const ItemListContainer = () => {
       });
     }
 
-    getData();
+    getData(); */
+
+    const docRef = collection(db, 'products');
+    console.log(docRef);
+    const docsDB = getDocs(docRef);
+    console.log(docsDB);
+
+    /* getDocs(collection(db, 'products'))
+    .then((snapshot) => {
+      setProducts(snapshot.docs.map((doc) => doc.data()));
+    }); */
 
   }, [categoryId]);
 

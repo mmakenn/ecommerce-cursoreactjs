@@ -5,7 +5,6 @@ import { CartList } from '../cartList/cartList'
 
 export const Cart = () => {
     const cart = useCartContext();
-    console.log(cart);
 
     if (cart.items.length === 0){
         return (
@@ -32,7 +31,7 @@ export const Cart = () => {
             {/* Botones */}
             <Container className='d-flex'>
                 <Button variant='warning' className='m-3'> 
-                    <Link to='/finished'> Finalizar compra </Link>
+                    <Link to='/checkout'> Finalizar compra </Link>
                 </Button>
                 <Button variant='warning' className='m-3'> 
                     <Link to='/'> Volver a la tienda </Link>
