@@ -7,6 +7,8 @@ import { Cart } from './components/cart/cart';
 import { CartProvider } from './context/cartContext';
 import { CheckOut } from './components/checkOut/checkOut';
 
+import { Button, Form, Row, Col } from "react-bootstrap";
+
 function App() {
   return (
     <CartProvider>

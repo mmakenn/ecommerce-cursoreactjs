@@ -12,7 +12,7 @@ export const ItemListContainer = () => {
   const {categoryId} = useParams();
 
   useEffect(() => {
-    /* const getData = () => {
+    const getData = () => {
       console.log('Hago fetch');
       fetch('../data.json', {
         headers : { 
@@ -32,12 +32,12 @@ export const ItemListContainer = () => {
       });
     }
 
-    getData(); */
+    getData();
 
-    const docRef = collection(db, 'products');
+    /* const docRef = collection(db, 'products');
     console.log(docRef);
     const docsDB = getDocs(docRef);
-    console.log(docsDB);
+    console.log(docsDB); */
 
     /* getDocs(collection(db, 'products'))
     .then((snapshot) => {

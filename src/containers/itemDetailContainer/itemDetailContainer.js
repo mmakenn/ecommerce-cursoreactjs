@@ -11,7 +11,7 @@ export const ItemDetailContainer = () => {
     const {itemId} = useParams();
 
     useEffect(() => {
-        /* const getData = () => {
+        const getData = () => {
             console.log('Hago fetch');
             fetch('../data.json', {
                 headers : { 
@@ -28,12 +28,12 @@ export const ItemDetailContainer = () => {
             });
         }
     
-        getData(); */
+        getData();
 
-        const docRef = doc(db, 'products', 'EpzUXPcF4A6cnSrj7u5x');
+        /* const docRef = doc(db, 'products', 'EpzUXPcF4A6cnSrj7u5x');
         console.log(docRef);
         const docsDB = getDoc(docRef);
-        console.log(docsDB);
+        console.log(docsDB); */
 
         /* getDoc(doc(db, 'products', itemId))
         .then((snapshot) => {
