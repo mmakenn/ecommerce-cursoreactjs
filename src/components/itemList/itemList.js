@@ -11,7 +11,7 @@ export const ItemList = (props) => {
                 title={product.title}
                 description={product.description}
                 price={product.price}
-                imgLink={product.imgLink}
+                imgLink={product.img}
                 /> 
             ) } 
         </Row>

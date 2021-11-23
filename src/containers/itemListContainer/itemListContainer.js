@@ -5,14 +5,17 @@ import { useParams } from 'react-router';
 import { Loader } from '../../components/loader/loader';
 
 import { db } from '../../firebase';
-import { collection, doc, getDocs } from '@firebase/firestore';
+import { collection, getDocs, query, where } from '@firebase/firestore';
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState(null);
   const {categoryId} = useParams();
+  categoryId && categoryId.replace('/category/', '');
 
   useEffect(() => {
-    const getData = () => {
+    /* 
+      ..:.: VERSION JSON LOCAL :.:..
+      const getData = () => {
       console.log('Hago fetch');
       fetch('../data.json', {
         headers : { 
@@ -32,18 +35,15 @@ export const ItemListContainer = () => {
       });
     }
 
-    getData();
+    getData(); */
 
-    /* const docRef = collection(db, 'products');
-    console.log(docRef);
-    const docsDB = getDocs(docRef);
-    console.log(docsDB); */
-
-    /* getDocs(collection(db, 'products'))
+    const loadedProducts = categoryId ? query(collection(db, 'products'),
+                                          where('category', '==', categoryId)) 
+                                      : collection(db, 'products'); 
+    getDocs(loadedProducts)
     .then((snapshot) => {
-      setProducts(snapshot.docs.map((doc) => doc.data()));
-    }); */
-
+      setProducts(snapshot.docs.map((doc) => {return {...doc.data(), id: doc.id}}));
+    })
   }, [categoryId]);
 
   return (products ? <ItemList products={products} /> : <Loader/>);

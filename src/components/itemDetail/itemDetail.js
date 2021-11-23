@@ -11,10 +11,16 @@ export const ItemDetail = (props) => {
         shoppingCart.addProduct(product, quantity);
     }
 
+    const getInitialCountValue = () =>{
+        return shoppingCart.checkQuantity(product);
+    } 
+
     return (
         <Card style={{ width: '50rem' }} className='m-auto'>
-            <Card.Header className='h2'>{product.title}</Card.Header>
-            <Card.Img variant="top" src={product.imgLink} alt={product.description}/>
+            <Card.Header className='d-flex flex-column'>
+                <Card.Text className='h2'>{product.title}</Card.Text>
+                <Card.Img variant="top" src={product.img} className='w-50' alt={product.description}/>
+            </Card.Header>
             <Card.Body>
                 <Card.Text>
                     {product.description}
@@ -25,9 +31,7 @@ export const ItemDetail = (props) => {
                 <Card.Text>
                     $ {product.price}
                 </Card.Text>
-                <ItemCount stock={5} addToCart={addToCart}/> {/* Por ahora el stock inicial está hardcodeado. 
-                Hay que implementar las funciones para almacenar en cache el valor y actualizarlo cuando el 
-                usuario agrega items al carrito. */}
+                <ItemCount stock={product.stock} initial={getInitialCountValue} addToCart={addToCart}/>
                 <Button variant='warning' className='m-3'><Link to='/'> Volver </Link></Button>
                 <Button variant='warning' className='m-3'><Link to='/carrito'> Ver Carrito </Link></Button>
             </Card.Body>

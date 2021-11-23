@@ -8,7 +8,7 @@ export const CartWidget = () => {
 
     return (
         <Container className='d-flex'>
-            <img src={cartWidget} alt='Cart Widget'/>
+            <img src={cartWidget} className='cart-img' alt='Cart Widget'/>
             <p>( {cart.itemsQuantity} )</p>
         </Container>
     );

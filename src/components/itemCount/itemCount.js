@@ -3,7 +3,7 @@ import './itemCount.css';
 import { Container, Button } from 'react-bootstrap';
 
 export const ItemCount = (props) => {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(props.initial);
 
     const addOne = () => {
         if (count + 1 <= props.stock){

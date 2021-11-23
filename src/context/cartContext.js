@@ -11,12 +11,12 @@ export const CartProvider = ( {children} ) => {
     const addProduct = (product, quantity) => {
         const foundedProduct = items.find(p => p.id === product.id);
         if (foundedProduct){
-            foundedProduct.quantity = foundedProduct.quantity + quantity; 
+            foundedProduct.quantity = quantity; 
         } else {
             product.quantity = quantity;
             setItems([...items, product]);
         }
-        setItemsQuantity(itemsQuantity + quantity);
+        setItemsQuantity(quantity);
     }
 
     const removeProduct = (product) => {
@@ -33,13 +33,18 @@ export const CartProvider = ( {children} ) => {
     }
 
     const getTotalPrice = () => {
-        let total = 0
+        let total = 0;
         items.forEach( item => total = total + item.price * item.quantity );
         return total;
     }
 
+    const checkQuantity = (product) => {
+        const foundedProduct = items.find(p => p.id === product.id);
+        return (foundedProduct ? foundedProduct.quantity : 1); 
+    }
+
     return (
-        <CartContext.Provider value={{ items, itemsQuantity, addProduct, removeProduct, clearCart, getTotalPrice }}>
+        <CartContext.Provider value={{ items, itemsQuantity, addProduct, removeProduct, clearCart, getTotalPrice, checkQuantity }}>
             { children }
         </CartContext.Provider>
     );

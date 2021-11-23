@@ -27,9 +27,9 @@ export const CheckOut = () => {
         console.log(purchaseInfo);
         cart.clearCart()
 
-        /* const orderCollection = collection(db, "orders");
+        const orderCollection = collection(db, "orders");
         addDoc(orderCollection, purchaseInfo)
-        .then(({id}) => console.log(id)); */
+        .then(({id}) => console.log(id));
 
     }
 
