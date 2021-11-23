@@ -36,7 +36,7 @@ export const Cart = () => {
                 <Button variant='warning' className='m-3'> 
                     <Link to='/'> Volver a la tienda </Link>
                 </Button>
-                <Button variant='warning' onClick={() => cart.clearCart()} className='m-3'> 
+                <Button variant='warning' onClick={cart.clearCart} className='m-3'> 
                     Vaciar carrito
                 </Button>
             </Container>
