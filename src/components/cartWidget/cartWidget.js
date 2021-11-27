@@ -5,7 +5,6 @@ import { useCartContext } from '../../context/cartContext';
 
 export const CartWidget = () => {
     const cart = useCartContext();    
-
     return (
         <Container className='d-flex'>
             <img src={cartWidget} className='cart-img' alt='Cart Widget'/>

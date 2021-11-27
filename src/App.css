@@ -3,13 +3,20 @@
 }
 
 .App-header {
-  background-image: url('./background.jpg');
-  background-size: cover;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #FCA311;
+  color: #b1b1b1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #b1b1b1;
 }
