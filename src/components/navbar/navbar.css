@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarpanch:wght@700');
 
 .App-navbar {
-    background-color: #b1b1b1;
+    background-color: black;
     padding: 3px;
     opacity: 0.9;
     width: 100vw;
@@ -24,7 +24,8 @@ ul {
     justify-content: space-around;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.App-navbar-menu a {
+    color: #FCA311;
+    font-family: 'Sarpanch', sans-serif;
+    text-transform: uppercase;
 }
