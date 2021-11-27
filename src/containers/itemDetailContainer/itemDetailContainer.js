@@ -35,7 +35,7 @@ export const ItemDetailContainer = () => {
         getDoc(doc(db, 'products', itemId))
         .then((snapshot) => {
             if (snapshot.exists()) {
-                setProduct(snapshot.data());
+                setProduct({...snapshot.data(), id: itemId});
             }
         });
 
