@@ -9,14 +9,19 @@ export const CartProvider = ( {children} ) => {
     const [itemsQuantity, setItemsQuantity] = useState(0);
 
     const addProduct = (product, quantity) => {
+        let modifyQuantity = 0;
         const foundedProduct = items.find(p => p.id === product.id);
-        if (foundedProduct){
-            foundedProduct.quantity = quantity; 
-        } else {
-            product.quantity = quantity;
-            setItems([...items, product]);
+        if(foundedProduct){
+            modifyQuantity = modifyQuantity - foundedProduct.quantity;
         }
-        setItemsQuantity(quantity);
+
+        const newItems = items.filter((prodInCart) => {
+            return prodInCart.id !== product.id;
+        });
+
+        modifyQuantity = modifyQuantity + quantity;
+        setItems([...newItems, {...product, quantity: quantity}]);
+        setItemsQuantity(itemsQuantity + modifyQuantity);
     }
 
     const removeProduct = (product) => {
