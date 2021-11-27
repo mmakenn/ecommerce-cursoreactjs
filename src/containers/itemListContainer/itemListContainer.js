@@ -37,9 +37,11 @@ export const ItemListContainer = () => {
 
     getData(); */
 
-    const loadedProducts = categoryId ? query(collection(db, 'products'),
-                                          where('category', '==', categoryId)) 
-                                      : collection(db, 'products'); 
+    let loadedProducts = collection(db, 'products');
+    if (categoryId) {
+      loadedProducts = query(loadedProducts, where('category', '==', categoryId));
+    }
+
     getDocs(loadedProducts)
     .then((snapshot) => {
       setProducts(snapshot.docs.map((doc) => {return {...doc.data(), id: doc.id}}));
