@@ -1,11 +1,15 @@
 import { useCartContext } from "../../context/cartContext";
+import { SendedOrderModal } from "../sendedOrderModal/sendedOrderModal";
 import { Button, Form, Row, Col } from "react-bootstrap";
 
 import { db } from "../../firebase";
 import { addDoc, collection } from "@firebase/firestore";
+import { useState } from "react";
 
 export const CheckOut = () => {
     const cart = useCartContext();
+    const [modalShow, setModalShow] = useState(false);
+    const [orderId, setOrderId] = useState('');
 
     const sendForm = (e) => {
         e.preventDefault()
@@ -24,16 +28,19 @@ export const CheckOut = () => {
                             date: new Date(),
                             total: cart.getTotalPrice()
                             }
-        console.log(purchaseInfo);
         cart.clearCart()
 
         const orderCollection = collection(db, "orders");
         addDoc(orderCollection, purchaseInfo)
-        .then(({id}) => console.log(id));
+        .then(({id}) => {
+            setOrderId(id);
+            setModalShow(true);
+        });
 
     }
 
     return (
+        <>
         <Form onSubmit={sendForm}>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre y apellido</Form.Label>
@@ -82,5 +89,12 @@ export const CheckOut = () => {
                 Enviar
             </Button>
         </Form>
+
+        <SendedOrderModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+            id={orderId}
+        />
+        </>
     );
 }
