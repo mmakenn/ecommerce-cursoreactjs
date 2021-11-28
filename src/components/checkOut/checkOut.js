@@ -11,22 +11,27 @@ export const CheckOut = () => {
     const [modalShow, setModalShow] = useState(false);
     const [orderId, setOrderId] = useState('');
 
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [adress, setAdress] = useState('');
+    const [city, setCity] = useState('');
+    const [state, setState] = useState('');
+    const [zipcode, setZipcode] = useState('');
+
     const sendForm = (e) => {
         e.preventDefault()
-        const formData = new FormData(e.target),
-              formDataObj = Object.fromEntries(formData.entries())
-
         const purchaseInfo = {cart: cart.items,
-                            buyer: {name: formDataObj['name'], 
-                                    phone: formDataObj['phone'], 
-                                    email: formDataObj['email'],
-                                    adress: formDataObj['adress'],
-                                    city: formDataObj['city'],
-                                    state: formDataObj['state'],
-                                    zipcode: formDataObj['zipcode']
-                                },
-                            date: new Date(),
-                            total: cart.getTotalPrice()
+                                buyer: {name: name, 
+                                        phone: phone, 
+                                        email: email,
+                                        adress: adress,
+                                        city: city,
+                                        state: state,
+                                        zipcode: zipcode
+                                    },
+                                date: new Date(),
+                                total: cart.getTotalPrice()
                             }
         cart.clearCart()
 
@@ -36,7 +41,10 @@ export const CheckOut = () => {
             setOrderId(id);
             setModalShow(true);
         });
+    }
 
+    const saveFormInput = (event, saveField) => {
+        saveField(event.target.value);
     }
 
     return (
@@ -44,35 +52,36 @@ export const CheckOut = () => {
         <Form onSubmit={sendForm}>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre y apellido</Form.Label>
-                <Form.Control type="text" placeholder="Horacio Pérez" name="name"/>
+                <Form.Control type="text" onChange={(e) => saveFormInput(e, setName)} placeholder="Horacio Pérez" name="name"/>
             </Form.Group>
 
             <Row className="mb-3">
                 <Form.Group as={Col}>
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="a@domain.com" name="email"/>
+                    <Form.Control type="email" onChange={(e) => saveFormInput(e, setEmail)} placeholder="a@domain.com" name="email"/>
                 </Form.Group>
 
                 <Form.Group as={Col}>
                     <Form.Label>Tel./Cel.</Form.Label>
-                    <Form.Control type="text" placeholder="01155559999" name="phone"/>
+                    <Form.Control type="text" onChange={(e) => saveFormInput(e, setPhone)} placeholder="01155559999" name="phone"/>
                 </Form.Group>
             </Row>
 
             <Form.Group className="mb-3">
                 <Form.Label>Dirección</Form.Label>
-                <Form.Control placeholder="Av. Santa Fé 562, piso 19, dpto A" name="adress"/>
+                <Form.Control type="text" onChange={(e) => saveFormInput(e, setAdress)} placeholder="Av. Santa Fé 562, piso 19, dpto A" name="adress"/>
             </Form.Group>
 
             <Row className="mb-3">
                 <Form.Group as={Col}>
                     <Form.Label>Ciudad</Form.Label>
-                    <Form.Control type="text" name="city"/>
+                    <Form.Control type="text" onChange={(e) => saveFormInput(e, setCity)} name="city"/>
                 </Form.Group>
 
                 <Form.Group as={Col}>
                     <Form.Label>Provincia</Form.Label>
-                    <Form.Select name="state">
+                    <Form.Select name="state" onChange={(e) => saveFormInput(e, setState)}>
+                        <option>Seleccionar..</option>
                         <option>CABA</option>
                         <option>Buenos Aires</option>
                         <option>Córdoba</option>
@@ -81,11 +90,11 @@ export const CheckOut = () => {
 
                 <Form.Group as={Col}>
                     <Form.Label>Código postal</Form.Label>
-                    <Form.Control type="number" name="zipcode"/>
+                    <Form.Control type="number" onChange={(e) => saveFormInput(e, setZipcode)} name="zipcode"/>
                 </Form.Group>
             </Row>
 
-            <Button type='submit' variant='warning' className='m-3'> 
+            <Button type='submit' disabled={!(name && email && phone && adress && city && state && zipcode)} variant='warning' className='m-3'> 
                 Enviar
             </Button>
         </Form>
