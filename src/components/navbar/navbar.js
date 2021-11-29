@@ -24,7 +24,11 @@ export const Navbar = () => {
                 <h1>- Entrenamientos Personalizados -</h1>
             </div>
             <ul className="App-navbar-menu">
-                <li><Link to={`/`}> Home </Link></li>
+                <li>
+                    <Link to={`/`}> 
+                        Home 
+                    </Link>
+                </li>
                 { categories && categories.map(category => 
                                         <li key={category.id}>
                                             <Link to={`/category/${category.name}`}>
@@ -32,7 +36,11 @@ export const Navbar = () => {
                                             </Link>
                                         </li>
                 ) }
-                <li><Link to={`/carrito`}> Carrito <CartWidget/></Link></li>
+                <li>
+                    <Link to={`/carrito`}> 
+                        Carrito <CartWidget/>
+                    </Link>
+                </li>
             </ul>
         </nav>
     );

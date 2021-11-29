@@ -21,14 +21,20 @@ export const ItemCount = (props) => {
         <>
         <Container className='d-flex justify-content-around item-count'>
             {/* Botón para restar 1 al contador */}
-            <Button onClick={restOne} variant='warning' className='d-flex align-items-center'> - </Button>
+            <Button onClick={restOne} 
+                    variant='warning' 
+                    className='d-flex align-items-center'> - </Button>
 
             <p> {count} </p>
 
             {/* Botón para sumar 1 al contador */}
-            <Button onClick={addOne} variant='warning' className='d-flex align-items-center'> + </Button>
+            <Button onClick={addOne} 
+                    variant='warning' 
+                    className='d-flex align-items-center'> + </Button>
         </Container>
-        <Button variant='warning' className='m-3' onClick={() => props.addToCart(count)}>Agregar al carrito</Button>
+        <Button variant='warning' className='m-3' onClick={() => props.addToCart(count)}>
+            Agregar al carrito
+        </Button>
         </>
     );
 }

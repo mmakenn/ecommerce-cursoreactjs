@@ -1,10 +1,10 @@
 import { useCartContext } from "../../context/cartContext";
 import { SendedOrderModal } from "../sendedOrderModal/sendedOrderModal";
 import { Button, Form, Row, Col } from "react-bootstrap";
+import { useState } from "react";
 
 import { db } from "../../firebase";
 import { addDoc, collection } from "@firebase/firestore";
-import { useState } from "react";
 
 export const CheckOut = () => {
     const cart = useCartContext();
@@ -52,35 +52,50 @@ export const CheckOut = () => {
         <Form onSubmit={sendForm}>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre y apellido</Form.Label>
-                <Form.Control type="text" onChange={(e) => saveFormInput(e, setName)} placeholder="Horacio Pérez" name="name"/>
+                <Form.Control type="text" 
+                            onChange={(e) => saveFormInput(e, setName)} 
+                            placeholder="Horacio Pérez" 
+                            name="name"/>
             </Form.Group>
 
             <Row className="mb-3">
                 <Form.Group as={Col}>
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" onChange={(e) => saveFormInput(e, setEmail)} placeholder="a@domain.com" name="email"/>
+                    <Form.Control type="email" 
+                                onChange={(e) => saveFormInput(e, setEmail)} 
+                                placeholder="a@domain.com" 
+                                name="email"/>
                 </Form.Group>
 
                 <Form.Group as={Col}>
                     <Form.Label>Tel./Cel.</Form.Label>
-                    <Form.Control type="text" onChange={(e) => saveFormInput(e, setPhone)} placeholder="01155559999" name="phone"/>
+                    <Form.Control type="text" 
+                                onChange={(e) => saveFormInput(e, setPhone)} 
+                                placeholder="01155559999" 
+                                name="phone"/>
                 </Form.Group>
             </Row>
 
             <Form.Group className="mb-3">
                 <Form.Label>Dirección</Form.Label>
-                <Form.Control type="text" onChange={(e) => saveFormInput(e, setAdress)} placeholder="Av. Santa Fé 562, piso 19, dpto A" name="adress"/>
+                <Form.Control type="text" 
+                            onChange={(e) => saveFormInput(e, setAdress)} 
+                            placeholder="Av. Santa Fé 562, piso 19, dpto A" 
+                            name="adress"/>
             </Form.Group>
 
             <Row className="mb-3">
                 <Form.Group as={Col}>
                     <Form.Label>Ciudad</Form.Label>
-                    <Form.Control type="text" onChange={(e) => saveFormInput(e, setCity)} name="city"/>
+                    <Form.Control type="text" 
+                                onChange={(e) => saveFormInput(e, setCity)} 
+                                name="city"/>
                 </Form.Group>
 
                 <Form.Group as={Col}>
                     <Form.Label>Provincia</Form.Label>
-                    <Form.Select name="state" onChange={(e) => saveFormInput(e, setState)}>
+                    <Form.Select onChange={(e) => saveFormInput(e, setState)} 
+                                name="state">
                         <option>Seleccionar..</option>
                         <option>CABA</option>
                         <option>Buenos Aires</option>
@@ -90,11 +105,17 @@ export const CheckOut = () => {
 
                 <Form.Group as={Col}>
                     <Form.Label>Código postal</Form.Label>
-                    <Form.Control type="number" onChange={(e) => saveFormInput(e, setZipcode)} name="zipcode"/>
+                    <Form.Control type="text" 
+                                onChange={(e) => saveFormInput(e, setZipcode)} 
+                                name="zipcode"/>
                 </Form.Group>
             </Row>
 
-            <Button type='submit' disabled={!(name && email && phone && adress && city && state && zipcode)} variant='warning' className='m-3'> 
+            <Button type='submit' 
+                    disabled={!(name && email && phone && adress && city && state && zipcode)} 
+                    variant='warning' 
+                    className='m-3'
+            > 
                 Enviar
             </Button>
         </Form>

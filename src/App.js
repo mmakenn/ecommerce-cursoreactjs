@@ -15,25 +15,23 @@ function App() {
           <header className="App-header">
             <Navbar />
           </header>
-          <div className="App-content">
-            <Switch>
-              <Route exact path='/'>
-                <ItemListContainer/>
-              </Route>
-              <Route exact path='/category/:categoryId'>
-                <ItemListContainer/>
-              </Route>
-              <Route exact path='/item/:itemId'>
-                <ItemDetailContainer/>
-              </Route>
-              <Route path='/carrito'>
-                <Cart/>
-              </Route>
-            </Switch>
+          <Switch>
+            <Route exact path='/'>
+              <ItemListContainer/>
+            </Route>
+            <Route exact path='/category/:categoryId'>
+              <ItemListContainer/>
+            </Route>
+            <Route exact path='/item/:itemId'>
+              <ItemDetailContainer/>
+            </Route>
+            <Route path='/carrito'>
+              <Cart/>
+            </Route>
             <Route path='/checkout'>
               <CheckOut />
             </Route>
-          </div>
+          </Switch>
         </div>
       </BrowserRouter>
     </CartProvider>

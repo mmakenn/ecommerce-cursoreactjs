@@ -7,6 +7,6 @@ export const CartList = (props) => {
                                             item={item} 
                                             removeProduct={props.removeProduct}
                                     />
-                        )
+                            )
     );
 }

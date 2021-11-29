@@ -10,28 +10,8 @@ export const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
     const {itemId} = useParams();
     itemId.replace('/item/', '');
-    useEffect(() => {
-        /* 
-        ..:.: VERSION JSON LOCAL :.:..
-        const getData = () => {
-            console.log('Hago fetch');
-            fetch('../data.json', {
-                headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-                }
-            }).then((response) => {
-                return response.json();
-            }).then((myJson)  => {
-                let loadedProducts = myJson['planes'].concat(myJson['clases']);
-                setProduct(
-                    loadedProducts.find(element => element.id === itemId)
-                ); 
-            });
-        }
     
-        getData(); */
-
+    useEffect(() => {
         getDoc(doc(db, 'products', itemId))
         .then((snapshot) => {
             if (snapshot.exists()) {
