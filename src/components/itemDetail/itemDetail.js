@@ -4,14 +4,19 @@ import { ItemCount } from "../itemCount/itemCount";
 import { useCartContext } from "../../context/cartContext";
 
 export const ItemDetail = (props) => {
+    /* Renderiza una Card con el detalle de un producto
+        Contiene botones para seleccionar la cantidad de unidades,
+        para agregar el producto al carrito y para ver el carrito. */
     let product = props.product;
     const shoppingCart = useCartContext();
 
     const addToCart = (quantity) => {
+        /* Agrega el producto y su cantidad al carrito. */
         shoppingCart.addProduct(product, quantity);
     }
 
     const getInitialCountValue = () =>{
+        /* Devuelve la cantidad de unidades del producto que ya fueron agregadas al carrito. */
         return shoppingCart.checkQuantity(product);
     } 
 

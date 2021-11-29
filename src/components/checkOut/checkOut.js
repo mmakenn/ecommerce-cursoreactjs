@@ -7,10 +7,10 @@ import { db } from "../../firebase";
 import { addDoc, collection } from "@firebase/firestore";
 
 export const CheckOut = () => {
+    /* Renderiza la pantalla de confirmación de compra. */
     const cart = useCartContext();
     const [modalShow, setModalShow] = useState(false);
-    const [orderId, setOrderId] = useState('');
-
+    /* Variables para guardar los campos del Form. */
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
@@ -18,9 +18,15 @@ export const CheckOut = () => {
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
     const [zipcode, setZipcode] = useState('');
+    /* Variable para guardar el id retornado por la base donde se almacena la orden de compra. */
+    const [orderId, setOrderId] = useState('');
 
     const sendForm = (e) => {
+        /* Evento de envío del Form. 
+            Se genera la orden de compra y se almacena en la base de datos. 
+            Se vacía el carrito de compras. */
         e.preventDefault()
+        //Se genera la orden de pedido.
         const purchaseInfo = {cart: cart.items,
                                 buyer: {name: name, 
                                         phone: phone, 
@@ -33,22 +39,25 @@ export const CheckOut = () => {
                                 date: new Date(),
                                 total: cart.getTotalPrice()
                             }
-        cart.clearCart()
-
+        cart.clearCart() //Reset del carrito
+        
+        //Se guarda la orden en la base.
         const orderCollection = collection(db, "orders");
         addDoc(orderCollection, purchaseInfo)
         .then(({id}) => {
             setOrderId(id);
-            setModalShow(true);
+            setModalShow(true); //Se muestra el modal con la confirmación del pedido.
         });
     }
 
     const saveFormInput = (event, saveField) => {
+        /* Asigna cada campo del Form ingresado por el usuario en su respectiva variable. */
         saveField(event.target.value);
     }
 
     return (
         <>
+        {/* Formulario donde ingresa los datos el usuario. */}
         <Form onSubmit={sendForm}>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre y apellido</Form.Label>
@@ -120,6 +129,7 @@ export const CheckOut = () => {
             </Button>
         </Form>
 
+        {/* Modal que muestra la confirmación del pedido. */}
         <SendedOrderModal
             show={modalShow}
             onHide={() => setModalShow(false)}

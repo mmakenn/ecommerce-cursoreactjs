@@ -2,7 +2,7 @@ import { Item } from "../item/item.js";
 import { Row } from "react-bootstrap";
 
 export const ItemList = (props) => {
-    /* Renderiza una lista de productos de la forma Item */
+    /* Renderiza la lista de productos del catálogo. */
     return (
         <Row xs={1} md={2} className="g-6">
             { props.products.map(product => 

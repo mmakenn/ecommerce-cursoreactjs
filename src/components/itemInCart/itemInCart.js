@@ -1,6 +1,8 @@
 import { Card, Button, Container } from "react-bootstrap";
 
 export const ItemInCart = (props) => {
+    /* Renderiza un producto dentro del carrito de compras.
+        Contiene un botón para eliminar el producto del carrito. */
     let item = props.item;
     let totalItemPrice = item.price * item.quantity;
     

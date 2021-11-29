@@ -2,6 +2,7 @@ import { Modal, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const SendedOrderModal = (props) => {
+    /* Renderiza el modal con el ID de la orden de compra generada y un mensaje para el usuario. */
     return (
         <Modal
             {...props}
@@ -23,6 +24,7 @@ export const SendedOrderModal = (props) => {
                 </p>
             </Modal.Body>
             <Modal.Footer>
+                {/* Botón de cierre del modal, redirige al HOME */}
                 <Button variant='warning' onClick={props.onHide}>
                     <Link to='/'>
                         Cerrar

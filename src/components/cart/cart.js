@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { CartList } from '../cartList/cartList'
 
 export const Cart = () => {
+    /* Renderiza la pantalla del carrito de compras. */
     const cart = useCartContext();
 
     if (cart.items.length === 0){
+        /* Mensaje cuando el carrito está vacío */
         return (
             <Container className='d-flex flex-column justify-content-center w-50'>
                 <p className='h1 m-3'>

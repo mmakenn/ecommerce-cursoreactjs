@@ -4,6 +4,8 @@ import { Container } from 'react-bootstrap';
 import { useCartContext } from '../../context/cartContext';
 
 export const CartWidget = () => {
+    /* Renderiza el icono de carrito. 
+        Muestra la cantidad de items que contiene el carrito, se actualiza automáticamente */
     const cart = useCartContext();    
     return (
         <Container className='d-flex'>

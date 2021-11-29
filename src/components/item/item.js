@@ -2,6 +2,7 @@ import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export const Item = (props) => {
+    /* Renderiza la Card de un producto. */
     return (
         <Card style={{ width: '18rem' }} className='m-3'>
             <Card.Img variant="top" src={props.imgLink} alt={props.description}/>

@@ -3,6 +3,7 @@ import './itemCount.css';
 import { Container, Button } from 'react-bootstrap';
 
 export const ItemCount = (props) => {
+    /* Renderiza un contador para seleccionar la cantidad de productos. */
     const [count, setCount] = useState(props.initial);
 
     const addOne = () => {

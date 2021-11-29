@@ -7,9 +7,11 @@ import { db } from '../../firebase';
 import { collection, getDocs } from '@firebase/firestore';
 
 export const Navbar = () => {
+    /* Renderiza el navbar del sitio. */
     const [categories, setCategories] = useState(null);
 
     useEffect(() => {
+        /* Se levantan las categorías navegables desde la base de datos. */
         const loadedCategories = collection(db, 'navbar');
         getDocs(loadedCategories)
         .then((snapshot) => {
