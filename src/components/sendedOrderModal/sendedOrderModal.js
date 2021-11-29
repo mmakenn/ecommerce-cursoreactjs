@@ -1,4 +1,5 @@
 import { Modal, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const SendedOrderModal = (props) => {
     return (
@@ -23,7 +24,9 @@ export const SendedOrderModal = (props) => {
             </Modal.Body>
             <Modal.Footer>
                 <Button variant='warning' onClick={props.onHide}>
-                    Close
+                    <Link to='/'>
+                        Cerrar
+                    </Link>
                 </Button>
             </Modal.Footer>
         </Modal>
