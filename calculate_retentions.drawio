@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-21T21:16:18.937Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="m8HhilVSS8O6Lp6C462l" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-21T21:21:41.175Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Q6yDNVuF5HY4ZK27cGMU" version="22.1.21" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2307" dy="1962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1030,22 +1030,37 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-2" value="Porcentaje = 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="645" y="80.31" width="88.5" height="61" as="geometry" />
+          <mxGeometry x="720" y="80.31" width="88.5" height="61" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-4" target="iAEYxfk0ndzNTg9fauQl-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-4" value="Porcentaje = porcentaje configurado en aplicación del impuesto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="774.5" y="81.68" width="159" height="60" as="geometry" />
+          <mxGeometry x="849.5" y="81.68" width="159" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-6" value="Si" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="730" y="90.25" width="29" height="16" as="geometry" />
+          <mxGeometry x="805" y="90.25" width="29" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-8" target="iAEYxfk0ndzNTg9fauQl-12">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-8" value="&quot;base&quot; = all_concepts[&quot;base&quot;]&lt;br&gt;&quot;to_pay&quot; = all_concepts[&quot;to_pay&quot;]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="600" y="-32.5" width="180" height="60" as="geometry" />
+          <mxGeometry x="675" y="-32.5" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-10" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="659" y="60.31" width="30" height="20" as="geometry" />
+          <mxGeometry x="734" y="60.31" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-12" target="iAEYxfk0ndzNTg9fauQl-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-12" value="La &quot;calculation_base&quot; es &quot;payment_amount_untaxed&quot; o &quot;payment_amount&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="932.5" y="-60.5" width="182.5" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-14" value="&lt;span style=&quot;background-color: initial;&quot;&gt;La retención es de Ganancias?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1180.5" y="-50" width="104.5" height="95.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-16" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1113" y="-25" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
