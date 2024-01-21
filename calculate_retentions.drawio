@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-21T23:22:58.683Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="32KEPHVJLBmVaOptglxS" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-21T23:29:16.894Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="lrIGSTqkHKO-oMxiwgTh" version="22.1.21" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2970" dy="1924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2856" dy="1859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -1223,8 +1223,46 @@
         <mxCell id="iAEYxfk0ndzNTg9fauQl-72" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2090" y="36" width="30" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-78" target="iAEYxfk0ndzNTg9fauQl-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-78" target="iAEYxfk0ndzNTg9fauQl-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-78" value="&lt;span style=&quot;background-color: initial;&quot;&gt;La retención es de Ganancias?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2490" y="-55.5" width="104.5" height="95.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-81" target="iAEYxfk0ndzNTg9fauQl-85">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2658" y="93" />
+              <mxPoint x="2690" y="93" />
+              <mxPoint x="2690" y="-8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-81" value="&quot;amount&quot; = &quot;amount&quot; - monto anterior del período" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2470" y="79.68" width="188" height="33.75" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-84" value="Si" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2520" y="40" width="29" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-85" target="uQpICD7PjBjKIR8CFugr-145">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2801" y="-170" />
+              <mxPoint x="680" y="-170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-85" value="&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;amount&quot; &amp;lt; monto mínimo a retener y no hay retenciones anteriores?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2722" y="-65.5" width="158" height="115.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-89" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2594.5" y="-29.5" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-91" value="Si" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2770" y="-81.5" width="29" height="16" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
