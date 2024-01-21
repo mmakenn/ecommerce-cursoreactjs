@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-21T17:43:52.219Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ZO7mKVQIQj5Nd76PLkA2" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-21T21:16:18.937Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="m8HhilVSS8O6Lp6C462l" version="22.1.21" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3036" dy="1962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2307" dy="1962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -322,8 +322,8 @@
         <mxCell id="uQpICD7PjBjKIR8CFugr-243" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uQpICD7PjBjKIR8CFugr-139" target="uQpICD7PjBjKIR8CFugr-112" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uQpICD7PjBjKIR8CFugr-139" value="Actualizar acumulador &quot;all_concepts&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-182.5" y="448" width="125" height="36" as="geometry" />
+        <mxCell id="uQpICD7PjBjKIR8CFugr-139" value="Actualizar acumulador &quot;all_concepts&quot;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;{&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;base&quot; = &quot;base_unrec&quot;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;to_pay&quot; = &quot;base_to_pay&quot;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-221.5" y="368" width="202.5" height="92" as="geometry" />
         </mxCell>
         <mxCell id="uQpICD7PjBjKIR8CFugr-248" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uQpICD7PjBjKIR8CFugr-143" target="uQpICD7PjBjKIR8CFugr-145" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1026,14 +1026,26 @@
         <mxCell id="iAEYxfk0ndzNTg9fauQl-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-2" target="iAEYxfk0ndzNTg9fauQl-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-2" target="iAEYxfk0ndzNTg9fauQl-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-2" value="Porcentaje = 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="645" y="80.31" width="88.5" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-4" target="iAEYxfk0ndzNTg9fauQl-8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-4" value="Porcentaje = porcentaje configurado en aplicación del impuesto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="774.5" y="81.68" width="159" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-6" value="Si" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="730" y="90.25" width="29" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-8" value="&quot;base&quot; = all_concepts[&quot;base&quot;]&lt;br&gt;&quot;to_pay&quot; = all_concepts[&quot;to_pay&quot;]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="-32.5" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-10" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="659" y="60.31" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
