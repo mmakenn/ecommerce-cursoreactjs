@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-21T17:16:32.784Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="tEcQc5DmMfEpxwc7FLxx" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-21T17:36:33.560Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="6xuE6hrskKl5tqG7AJn4" version="22.1.21" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="3036" dy="1962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -335,6 +335,9 @@
           <mxGeometry x="500" y="235.5" width="120" height="51" as="geometry" />
         </mxCell>
         <mxCell id="uQpICD7PjBjKIR8CFugr-250" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uQpICD7PjBjKIR8CFugr-145" target="uQpICD7PjBjKIR8CFugr-249" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="uQpICD7PjBjKIR8CFugr-145" target="iAEYxfk0ndzNTg9fauQl-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uQpICD7PjBjKIR8CFugr-145" value="Calcular monto retención" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -1019,6 +1022,15 @@
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-0" value="ACÁ no termino de entender porqué hace esto así. ¿Una cuenta contable puede estar asociada a más de un concepto para un mismo tipo de retención? Porque de ser así si para UN concepto no está sujeto a retención, la misma no se efectúa para ninguno" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;base=21;size=30;position=0.82;position2=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-882" y="1002" width="247" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iAEYxfk0ndzNTg9fauQl-2" target="iAEYxfk0ndzNTg9fauQl-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-2" value="Porcentaje = 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="641.5" y="58.63" width="88.5" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-4" value="Porcentaje = porcentaje configurado en aplicación del impuesto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="771" y="60" width="159" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
