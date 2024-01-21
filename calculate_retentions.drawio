@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-21T17:36:33.560Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="6xuE6hrskKl5tqG7AJn4" version="22.1.21" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-21T17:43:52.219Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="ZO7mKVQIQj5Nd76PLkA2" version="22.1.21" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="3036" dy="1962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1027,10 +1027,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-2" value="Porcentaje = 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="641.5" y="58.63" width="88.5" height="61" as="geometry" />
+          <mxGeometry x="645" y="80.31" width="88.5" height="61" as="geometry" />
         </mxCell>
         <mxCell id="iAEYxfk0ndzNTg9fauQl-4" value="Porcentaje = porcentaje configurado en aplicación del impuesto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="771" y="60" width="159" height="60" as="geometry" />
+          <mxGeometry x="774.5" y="81.68" width="159" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iAEYxfk0ndzNTg9fauQl-6" value="Si" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="730" y="90.25" width="29" height="16" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
